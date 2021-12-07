@@ -1,0 +1,847 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local kzshub = Instance.new("TextLabel")
+local lineframe = Instance.new("Frame")
+local tabs = Instance.new("ImageLabel")
+local main = Instance.new("TextButton")
+local scripts = Instance.new("TextButton")
+local teleport = Instance.new("TextButton")
+local teleportframe = Instance.new("ScrollingFrame")
+local bank = Instance.new("TextButton")
+local Roundify = Instance.new("ImageLabel")
+local chrp = Instance.new("TextButton")
+local Roundify_2 = Instance.new("ImageLabel")
+local armor = Instance.new("TextButton")
+local Roundify_3 = Instance.new("ImageLabel")
+local db = Instance.new("TextButton")
+local Roundify_4 = Instance.new("ImageLabel")
+local scriptmain = Instance.new("ScrollingFrame")
+local head = Instance.new("TextButton")
+local Roundify_5 = Instance.new("ImageLabel")
+local silent = Instance.new("TextButton")
+local Roundify_6 = Instance.new("ImageLabel")
+local chatspy = Instance.new("TextButton")
+local Roundify_7 = Instance.new("ImageLabel")
+local _70 = Instance.new("TextButton")
+local Roundify_8 = Instance.new("ImageLabel")
+local _120 = Instance.new("TextButton")
+local Roundify_9 = Instance.new("ImageLabel")
+local rejoin = Instance.new("TextButton")
+local Roundify_10 = Instance.new("ImageLabel")
+local rejoin_2 = Instance.new("TextButton")
+local Roundify_11 = Instance.new("ImageLabel")
+local mainframe = Instance.new("ScrollingFrame")
+local PlayerImage = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local PlayerName = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.192159146, 0, 0.125237182, 0)
+Frame.Size = UDim2.new(0, 441, 0, 286)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(20, 20, 20)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+kzshub.Name = "kzs hub"
+kzshub.Parent = Frame
+kzshub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+kzshub.BackgroundTransparency = 1.000
+kzshub.Position = UDim2.new(0.0163599178, 0, 0, 0)
+kzshub.Size = UDim2.new(0, 162, 0, 47)
+kzshub.Font = Enum.Font.SciFi
+kzshub.Text = "KZS HUB"
+kzshub.TextColor3 = Color3.fromRGB(0, 255, 255)
+kzshub.TextScaled = true
+kzshub.TextSize = 14.000
+kzshub.TextWrapped = true
+
+lineframe.Name = "lineframe"
+lineframe.Parent = Frame
+lineframe.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+lineframe.Position = UDim2.new(0.00609756447, 0, 0.159412563, 0)
+lineframe.Size = UDim2.new(0, 438, 0, 1)
+
+tabs.Name = "tabs"
+tabs.Parent = Frame
+tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tabs.BackgroundTransparency = 1.000
+tabs.Position = UDim2.new(0, 0, 0.164335668, 0)
+tabs.Size = UDim2.new(0, 113, 0, 239)
+tabs.Image = "rbxassetid://3570695787"
+tabs.ImageColor3 = Color3.fromRGB(17, 17, 17)
+tabs.ScaleType = Enum.ScaleType.Slice
+tabs.SliceCenter = Rect.new(100, 100, 100, 100)
+tabs.SliceScale = 0.120
+
+main.Name = "main"
+main.Parent = tabs
+main.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+main.BackgroundTransparency = 1.000
+main.Position = UDim2.new(0.017699115, 0, 0.0251046028, 0)
+main.Size = UDim2.new(0, 106, 0, 43)
+main.Font = Enum.Font.SciFi
+main.Text = "MAIN"
+main.TextColor3 = Color3.fromRGB(85, 255, 255)
+main.TextSize = 35.000
+main.TextWrapped = true
+main.MouseButton1Down:Connect(function()
+	mainframe.Visible = true
+	scriptmain.Visible = false
+	teleportframe.Visible = false
+end)
+
+scripts.Name = "scripts"
+scripts.Parent = tabs
+scripts.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+scripts.BackgroundTransparency = 1.000
+scripts.Position = UDim2.new(0, 0, 0.251046002, 0)
+scripts.Size = UDim2.new(0, 106, 0, 43)
+scripts.Font = Enum.Font.SciFi
+scripts.Text = "SCRITPS"
+scripts.TextColor3 = Color3.fromRGB(85, 255, 255)
+scripts.TextSize = 25.000
+scripts.TextWrapped = true
+scripts.MouseButton1Down:Connect(function()
+	mainframe.Visible = false
+	scriptmain.Visible = true
+	teleportframe.Visible = false
+end)
+
+teleport.Name = "teleport"
+teleport.Parent = tabs
+teleport.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+teleport.BackgroundTransparency = 1.000
+teleport.Position = UDim2.new(0.017699115, 0, 0.46443513, 0)
+teleport.Size = UDim2.new(0, 106, 0, 43)
+teleport.Font = Enum.Font.SciFi
+teleport.Text = "TELEPORT"
+teleport.TextColor3 = Color3.fromRGB(85, 255, 255)
+teleport.TextSize = 25.000
+teleport.TextWrapped = true
+teleport.MouseButton1Down:Connect(function()
+	mainframe.Visible = false
+	scriptmain.Visible = false
+	teleportframe.Visible = true
+end)
+
+teleportframe.Name = "teleportframe"
+teleportframe.Parent = Frame
+teleportframe.Active = true
+teleportframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teleportframe.BackgroundTransparency = 1.000
+teleportframe.BorderSizePixel = 0
+teleportframe.Position = UDim2.new(0.256235838, 0, 0.164335668, 0)
+teleportframe.Size = UDim2.new(0, 327, 0, 239)
+teleportframe.Visible = false
+teleportframe.CanvasSize = UDim2.new(0, 0, 1, 0)
+teleportframe.ScrollBarThickness = 5
+
+bank.Name = "bank"
+bank.Parent = teleportframe
+bank.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+bank.BorderColor3 = Color3.fromRGB(85, 255, 255)
+bank.BorderSizePixel = 0
+bank.Position = UDim2.new(0.0275229346, 0, 0.0697770864, 0)
+bank.Size = UDim2.new(0, 303, 0, 29)
+bank.ZIndex = 2
+bank.Font = Enum.Font.Roboto
+bank.Text = "TP - BANK"
+bank.TextColor3 = Color3.fromRGB(83, 250, 250)
+bank.TextSize = 25.000
+bank.TextWrapped = true
+
+Roundify.Name = "Roundify"
+Roundify.Parent = bank
+Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify.BackgroundTransparency = 1.000
+Roundify.Position = UDim2.new(0.5, 0, 0.500753999, 0)
+Roundify.Size = UDim2.new(1, 24, 0.173922107, 24)
+Roundify.Image = "rbxassetid://3570695787"
+Roundify.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify.ScaleType = Enum.ScaleType.Slice
+Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify.SliceScale = 0.120
+
+chrp.Name = "chrp"
+chrp.Parent = teleportframe
+chrp.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+chrp.BorderColor3 = Color3.fromRGB(85, 255, 255)
+chrp.BorderSizePixel = 0
+chrp.Position = UDim2.new(0.0275229346, 0, 0.47537151, 0)
+chrp.Size = UDim2.new(0, 303, 0, 29)
+chrp.ZIndex = 2
+chrp.Font = Enum.Font.Roboto
+chrp.Text = "TP - CHEAP RPG"
+chrp.TextColor3 = Color3.fromRGB(83, 250, 250)
+chrp.TextSize = 25.000
+chrp.TextWrapped = true
+
+Roundify_2.Name = "Roundify"
+Roundify_2.Parent = chrp
+Roundify_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_2.BackgroundTransparency = 1.000
+Roundify_2.Position = UDim2.new(0.5, 0, 0.500753999, 0)
+Roundify_2.Size = UDim2.new(1, 24, 0.173922107, 24)
+Roundify_2.Image = "rbxassetid://3570695787"
+Roundify_2.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_2.ScaleType = Enum.ScaleType.Slice
+Roundify_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_2.SliceScale = 0.120
+
+armor.Name = "armor"
+armor.Parent = teleportframe
+armor.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+armor.BorderColor3 = Color3.fromRGB(85, 255, 255)
+armor.BorderSizePixel = 0
+armor.Position = UDim2.new(0.0275229346, 0, 0.34600088, 0)
+armor.Size = UDim2.new(0, 303, 0, 29)
+armor.ZIndex = 2
+armor.Font = Enum.Font.Roboto
+armor.Text = "TP - HEAVY ARMOR"
+armor.TextColor3 = Color3.fromRGB(83, 250, 250)
+armor.TextSize = 25.000
+armor.TextWrapped = true
+
+Roundify_3.Name = "Roundify"
+Roundify_3.Parent = armor
+Roundify_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_3.BackgroundTransparency = 1.000
+Roundify_3.Position = UDim2.new(0.5, 0, 0.500753999, 0)
+Roundify_3.Size = UDim2.new(1, 24, 0.173922107, 24)
+Roundify_3.Image = "rbxassetid://3570695787"
+Roundify_3.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_3.ScaleType = Enum.ScaleType.Slice
+Roundify_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_3.SliceScale = 0.120
+
+db.Name = "db"
+db.Parent = teleportframe
+db.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+db.BorderColor3 = Color3.fromRGB(85, 255, 255)
+db.BorderSizePixel = 0
+db.Position = UDim2.new(0.0275229346, 0, 0.206140727, 0)
+db.Size = UDim2.new(0, 303, 0, 29)
+db.ZIndex = 2
+db.Font = Enum.Font.Roboto
+db.Text = "TP - DB,REV & MORE"
+db.TextColor3 = Color3.fromRGB(83, 250, 250)
+db.TextSize = 25.000
+db.TextWrapped = true
+
+Roundify_4.Name = "Roundify"
+Roundify_4.Parent = db
+Roundify_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_4.BackgroundTransparency = 1.000
+Roundify_4.Position = UDim2.new(0.5, 0, 0.500753999, 0)
+Roundify_4.Size = UDim2.new(1, 24, 0.173922107, 24)
+Roundify_4.Image = "rbxassetid://3570695787"
+Roundify_4.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_4.ScaleType = Enum.ScaleType.Slice
+Roundify_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_4.SliceScale = 0.120
+
+scriptmain.Name = "scriptmain"
+scriptmain.Parent = Frame
+scriptmain.Active = true
+scriptmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptmain.BackgroundTransparency = 1.000
+scriptmain.BorderSizePixel = 0
+scriptmain.Position = UDim2.new(0.256235838, 0, 0.164335668, 0)
+scriptmain.Size = UDim2.new(0, 327, 0, 239)
+scriptmain.Visible = false
+scriptmain.CanvasPosition = Vector2.new(0, 47)
+scriptmain.CanvasSize = UDim2.new(0, 0, 1, 0)
+scriptmain.ScrollBarThickness = 5
+
+head.Name = "head"
+head.Parent = scriptmain
+head.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+head.BorderColor3 = Color3.fromRGB(85, 255, 255)
+head.BorderSizePixel = 0
+head.Position = UDim2.new(0.0275229346, 0, 0.0697770864, 0)
+head.Size = UDim2.new(0, 303, 0, 29)
+head.ZIndex = 2
+head.Font = Enum.Font.Roboto
+head.Text = "HEADLESS"
+head.TextColor3 = Color3.fromRGB(83, 250, 250)
+head.TextSize = 25.000
+head.TextWrapped = true
+
+Roundify_5.Name = "Roundify"
+Roundify_5.Parent = head
+Roundify_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_5.BackgroundTransparency = 1.000
+Roundify_5.Position = UDim2.new(0.5, 0, 0.500753999, 0)
+Roundify_5.Size = UDim2.new(1, 24, 0.173922107, 24)
+Roundify_5.Image = "rbxassetid://3570695787"
+Roundify_5.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_5.ScaleType = Enum.ScaleType.Slice
+Roundify_5.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_5.SliceScale = 0.120
+
+silent.Name = "silent"
+silent.Parent = scriptmain
+silent.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+silent.BorderColor3 = Color3.fromRGB(85, 255, 255)
+silent.BorderSizePixel = 0
+silent.Position = UDim2.new(0.0275229346, 0, 0.202644184, 0)
+silent.Size = UDim2.new(0, 303, 0, 29)
+silent.ZIndex = 2
+silent.Font = Enum.Font.Roboto
+silent.Text = "SILENT AIM"
+silent.TextColor3 = Color3.fromRGB(83, 250, 250)
+silent.TextSize = 25.000
+silent.TextWrapped = true
+
+Roundify_6.Name = "Roundify"
+Roundify_6.Parent = silent
+Roundify_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_6.BackgroundTransparency = 1.000
+Roundify_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Roundify_6.Size = UDim2.new(1, 24, 0.172413796, 24)
+Roundify_6.Image = "rbxassetid://3570695787"
+Roundify_6.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_6.ScaleType = Enum.ScaleType.Slice
+Roundify_6.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_6.SliceScale = 0.120
+
+chatspy.Name = "chat spy"
+chatspy.Parent = scriptmain
+chatspy.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+chatspy.BorderColor3 = Color3.fromRGB(85, 255, 255)
+chatspy.BorderSizePixel = 0
+chatspy.Position = UDim2.new(0.0275229346, 0, 0.34600085, 0)
+chatspy.Size = UDim2.new(0, 303, 0, 29)
+chatspy.ZIndex = 2
+chatspy.Font = Enum.Font.Roboto
+chatspy.Text = "CHAT SPY"
+chatspy.TextColor3 = Color3.fromRGB(83, 250, 250)
+chatspy.TextSize = 25.000
+chatspy.TextWrapped = true
+
+Roundify_7.Name = "Roundify"
+Roundify_7.Parent = chatspy
+Roundify_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_7.BackgroundTransparency = 1.000
+Roundify_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Roundify_7.Size = UDim2.new(1, 24, 0.172413796, 24)
+Roundify_7.Image = "rbxassetid://3570695787"
+Roundify_7.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_7.ScaleType = Enum.ScaleType.Slice
+Roundify_7.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_7.SliceScale = 0.120
+
+_70.Name = "70"
+_70.Parent = scriptmain
+_70.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+_70.BorderColor3 = Color3.fromRGB(85, 255, 255)
+_70.BorderSizePixel = 0
+_70.Position = UDim2.new(0.0275229346, 0, 0.485861003, 0)
+_70.Size = UDim2.new(0, 303, 0, 29)
+_70.ZIndex = 2
+_70.Font = Enum.Font.Roboto
+_70.Text = "FOV -  70"
+_70.TextColor3 = Color3.fromRGB(83, 250, 250)
+_70.TextSize = 25.000
+_70.TextWrapped = true
+
+Roundify_8.Name = "Roundify"
+Roundify_8.Parent = _70
+Roundify_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_8.BackgroundTransparency = 1.000
+Roundify_8.Position = UDim2.new(0.5, 0, 0.431034476, 0)
+Roundify_8.Size = UDim2.new(1, 24, 0.310344815, 24)
+Roundify_8.Image = "rbxassetid://3570695787"
+Roundify_8.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_8.ScaleType = Enum.ScaleType.Slice
+Roundify_8.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_8.SliceScale = 0.120
+
+_120.Name = "120"
+_120.Parent = scriptmain
+_120.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+_120.BorderColor3 = Color3.fromRGB(85, 255, 255)
+_120.BorderSizePixel = 0
+_120.Position = UDim2.new(0.0275229346, 0, 0.611735046, 0)
+_120.Size = UDim2.new(0, 303, 0, 29)
+_120.ZIndex = 2
+_120.Font = Enum.Font.Roboto
+_120.Text = "FOV - 120"
+_120.TextColor3 = Color3.fromRGB(83, 250, 250)
+_120.TextSize = 25.000
+_120.TextWrapped = true
+
+Roundify_9.Name = "Roundify"
+Roundify_9.Parent = _120
+Roundify_9.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_9.BackgroundTransparency = 1.000
+Roundify_9.Position = UDim2.new(0.5, 0, 0.500755072, 0)
+Roundify_9.Size = UDim2.new(1, 24, 0.170904428, 24)
+Roundify_9.Image = "rbxassetid://3570695787"
+Roundify_9.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_9.ScaleType = Enum.ScaleType.Slice
+Roundify_9.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_9.SliceScale = 0.120
+
+rejoin.Name = "rejoin"
+rejoin.Parent = scriptmain
+rejoin.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+rejoin.BorderColor3 = Color3.fromRGB(85, 255, 255)
+rejoin.BorderSizePixel = 0
+rejoin.Position = UDim2.new(0.0275229346, 0, 0.737609148, 0)
+rejoin.Size = UDim2.new(0, 303, 0, 29)
+rejoin.ZIndex = 2
+rejoin.Font = Enum.Font.Roboto
+rejoin.Text = "REJOIN"
+rejoin.TextColor3 = Color3.fromRGB(83, 250, 250)
+rejoin.TextSize = 25.000
+rejoin.TextWrapped = true
+
+Roundify_10.Name = "Roundify"
+Roundify_10.Parent = rejoin
+Roundify_10.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_10.BackgroundTransparency = 1.000
+Roundify_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+Roundify_10.Size = UDim2.new(1, 24, 0.172413796, 24)
+Roundify_10.Image = "rbxassetid://3570695787"
+Roundify_10.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_10.ScaleType = Enum.ScaleType.Slice
+Roundify_10.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_10.SliceScale = 0.120
+
+rejoin_2.Name = "rejoin"
+rejoin_2.Parent = scriptmain
+rejoin_2.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+rejoin_2.BorderColor3 = Color3.fromRGB(85, 255, 255)
+rejoin_2.BorderSizePixel = 0
+rejoin_2.Position = UDim2.new(0.0275229346, 0, 0.86348331, 0)
+rejoin_2.Size = UDim2.new(0, 303, 0, 29)
+rejoin_2.ZIndex = 2
+rejoin_2.Font = Enum.Font.Roboto
+rejoin_2.Text = "FULL BRIGHT"
+rejoin_2.TextColor3 = Color3.fromRGB(83, 250, 250)
+rejoin_2.TextSize = 25.000
+rejoin_2.TextWrapped = true
+
+Roundify_11.Name = "Roundify"
+Roundify_11.Parent = rejoin_2
+Roundify_11.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_11.BackgroundTransparency = 1.000
+Roundify_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+Roundify_11.Size = UDim2.new(1, 24, 0.172413796, 24)
+Roundify_11.Image = "rbxassetid://3570695787"
+Roundify_11.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Roundify_11.ScaleType = Enum.ScaleType.Slice
+Roundify_11.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_11.SliceScale = 0.120
+
+mainframe.Name = "mainframe"
+mainframe.Parent = Frame
+mainframe.Active = true
+mainframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainframe.BackgroundTransparency = 1.000
+mainframe.BorderSizePixel = 0
+mainframe.Position = UDim2.new(0.256235838, 0, 0.164335668, 0)
+mainframe.Size = UDim2.new(0, 327, 0, 239)
+mainframe.CanvasSize = UDim2.new(0, 0, 1, 0)
+mainframe.ScrollBarThickness = 5
+
+PlayerImage.Name = "PlayerImage"
+PlayerImage.Parent = mainframe
+PlayerImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerImage.BackgroundTransparency = 1.000
+PlayerImage.BorderSizePixel = 0
+PlayerImage.Position = UDim2.new(0.275229365, 0, 0.0680117458, 0)
+PlayerImage.Size = UDim2.new(0, 138, 0, 100)
+PlayerImage.ZIndex = 2
+PlayerImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel.Parent = mainframe
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0672782883, 0, 0.419644654, 0)
+TextLabel.Size = UDim2.new(0, 280, 0, 50)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "WELCOME TO KZS HUB!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 20.000
+TextLabel.TextWrapped = true
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = mainframe
+PlayerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.BackgroundTransparency = 1.000
+PlayerName.Position = UDim2.new(0.0611620806, 0, 0.570314169, 0)
+PlayerName.Size = UDim2.new(0, 277, 0, 42)
+PlayerName.Font = Enum.Font.SciFi
+PlayerName.Text = "PLAYER"
+PlayerName.TextColor3 = Color3.fromRGB(0, 255, 255)
+PlayerName.TextScaled = true
+PlayerName.TextSize = 20.000
+PlayerName.TextWrapped = true
+
+TextLabel_2.Parent = mainframe
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0611620769, 0, 0.716757655, 0)
+TextLabel_2.Size = UDim2.new(0, 276, 0, 33)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = "THIS IS JUST SIMPLE DA HOOD GUI MADE BY KAIZEN#8422"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+
+TextButton_2.Parent = ScreenGui
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.307400376, 0)
+TextButton_2.Size = UDim2.new(0, 71, 0, 42)
+TextButton_2.ZIndex = 2
+TextButton_2.Font = Enum.Font.ArialBold
+TextButton_2.Text = "TOGGLE"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+wait(1)
+	local T = OPEN
+	local on=false
+	local f = TextButton_2.Parent.Frame
+	function click ()
+		if on==false then
+			on=true
+			f:TweenPosition(UDim2.new(0.119, 0,0.125, 0),"Out",'Bounce',1)
+			T.Text = "CLOSE"
+		else
+			on=false
+			f:TweenPosition(UDim2.new(-0.8, 0,0.12, 0),"Out",'Bounce',1)
+			T.Text = "OPEN"
+		end
+	end
+	
+	TextButton_2.MouseButton1Click:Connect(click)
+
+
+-- Scripts:
+
+local function TEBNOKU_fake_script() -- bank.LocalScript 
+	local script = Instance.new('LocalScript', bank)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-434.60995483398, 38.971572875977, -284.18685913086)
+	end)
+end
+coroutine.wrap(TEBNOKU_fake_script)()
+local function AFOOY_fake_script() -- chrp.LocalScript 
+	local script = Instance.new('LocalScript', chrp)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-788.10729980469, -39.649211883545, -931.38781738281)
+	end)
+end
+coroutine.wrap(AFOOY_fake_script)()
+local function MSGGIL_fake_script() -- armor.LocalScript 
+	local script = Instance.new('LocalScript', armor)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-935.32073974609, -28.500009536743, 561.83441162109)
+	end)
+end
+coroutine.wrap(MSGGIL_fake_script)()
+local function EBXWGF_fake_script() -- db.LocalScript 
+	local script = Instance.new('LocalScript', db)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-870.59393310547, -32.917030334473, -535.66650390625)
+	end)
+end
+coroutine.wrap(EBXWGF_fake_script)()
+local function FEKY_fake_script() -- head.LocalScript 
+	local script = Instance.new('LocalScript', head)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Head.Transparency = 1
+		for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+			if (v:IsA("Decal")) then
+				v:Destroy()
+			end
+		end
+	end)
+end
+coroutine.wrap(FEKY_fake_script)()
+local function FIZIJOP_fake_script() -- silent.LocalScript 
+	local script = Instance.new('LocalScript', silent)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/Module.lua"))()
+		Aiming.TeamCheck(false)
+	
+		-- // Services
+		local Workspace = game:GetService("Workspace")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
+		local UserInputService = game:GetService("UserInputService")
+	
+		-- // Vars
+		local LocalPlayer = Players.LocalPlayer
+		local Mouse = LocalPlayer:GetMouse()
+		local CurrentCamera = Workspace.CurrentCamera
+	
+		local DaHoodSettings = {
+			SilentAim = true,
+			AimLock = true,
+			Prediction = 0.165,
+			AimLockKeybind = Enum.KeyCode.E
+		}
+		getgenv().DaHoodSettings = DaHoodSettings
+	
+		-- // Overwrite to account downed
+		function Aiming.Check()
+			-- // Check A
+			if not (Aiming.Enabled == true and Aiming.Selected ~= LocalPlayer and Aiming.SelectedPart ~= nil) then
+				return false
+			end
+	
+			-- // Check if downed
+			local Character = Aiming.Character(Aiming.Selected)
+			local KOd = Character:WaitForChild("BodyEffects")["K.O"].Value
+			local Grabbed = Character:FindFirstChild("GRABBING_CONSTRAINT") ~= nil
+	
+			-- // Check B
+			if (KOd or Grabbed) then
+				return false
+			end
+	
+			-- //
+			return true
+		end
+	
+		-- // Hook
+		local __index
+		__index = hookmetamethod(game, "__index", function(t, k)
+			-- // Check if it trying to get our mouse's hit or target and see if we can use it
+			if (t:IsA("Mouse") and (k == "Hit" or k == "Target") and Aiming.Check()) then
+				-- // Vars
+				local SelectedPart = Aiming.SelectedPart
+	
+				-- // Hit/Target
+				if (DaHoodSettings.SilentAim and (k == "Hit" or k == "Target")) then
+					-- // Hit to account prediction
+					local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+	
+					-- // Return modded val
+					return (k == "Hit" and Hit or SelectedPart)
+				end
+			end
+	
+			-- // Return
+			return __index(t, k)
+		end)
+	
+		-- // Aimlock
+		RunService:BindToRenderStep("AimLock", 0, function()
+			if (DaHoodSettings.AimLock and Aiming.Check() and UserInputService:IsKeyDown(DaHoodSettings.AimLockKeybind)) then
+				-- // Vars
+				local SelectedPart = Aiming.SelectedPart
+	
+				-- // Hit to account prediction
+				local Hit = SelectedPart.CFrame + (SelectedPart.Velocity * DaHoodSettings.Prediction)
+	
+				-- // Set the camera to face towards the Hit
+				CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
+			end
+		end)
+	end)
+end
+coroutine.wrap(FIZIJOP_fake_script)()
+local function MLKLC_fake_script() -- chatspy.LocalScript 
+	local script = Instance.new('LocalScript', chatspy)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		enabled = true --chat "/spy" to toggle!
+		spyOnMyself = true --if true will check your messages too
+		public = false --if true will chat the logs publicly (fun, risky)
+		publicItalics = true --if true will use /me to stand out
+		privateProperties = { --customize private logs
+			Color = Color3.fromRGB(0,255,255); 
+			Font = Enum.Font.SourceSansBold;
+			TextSize = 18;
+		}
+	
+	
+		local StarterGui = game:GetService("StarterGui")
+		local Players = game:GetService("Players")
+		local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+		local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+		local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+		local instance = (_G.chatSpyInstance or 0) + 1
+		_G.chatSpyInstance = instance
+	
+		local function onChatted(p,msg)
+			if _G.chatSpyInstance == instance then
+				if p==player and msg:lower():sub(1,4)=="/spy" then
+					enabled = not enabled
+					wait(0.3)
+					privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				elseif enabled and (spyOnMyself==true or p~=player) then
+					msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+					local hidden = true
+					local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+						if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+							hidden = false
+						end
+					end)
+					wait(1)
+					conn:Disconnect()
+					if hidden and enabled then
+						if public then
+							saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+						else
+							privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+							StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+						end
+					end
+				end
+			end
+		end
+	
+		for _,p in ipairs(Players:GetPlayers()) do
+			p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+		end
+		Players.PlayerAdded:Connect(function(p)
+			p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+		end)
+		privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+		StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+		local chatFrame = player.PlayerGui.Chat.Frame
+		chatFrame.ChatChannelParentFrame.Visible = true
+		chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+	end)
+end
+coroutine.wrap(MLKLC_fake_script)()
+local function UIGP_fake_script() -- _70.LocalScript 
+	local script = Instance.new('LocalScript', _70)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		workspace.CurrentCamera.FieldOfView = 70
+	end)
+end
+coroutine.wrap(UIGP_fake_script)()
+local function NNUY_fake_script() -- _120.LocalScript 
+	local script = Instance.new('LocalScript', _120)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		workspace.CurrentCamera.FieldOfView = 120
+	end)
+end
+coroutine.wrap(NNUY_fake_script)()
+local function TSGSLT_fake_script() -- rejoin.LocalScript 
+	local script = Instance.new('LocalScript', rejoin)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("TeleportService"):Teleport(game.PlaceId)
+	end)
+end
+coroutine.wrap(TSGSLT_fake_script)()
+local function CCJRX_fake_script() -- rejoin_2.LocalScript 
+	local script = Instance.new('LocalScript', rejoin_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
+	end)
+end
+coroutine.wrap(CCJRX_fake_script)()
+local function GKKA_fake_script() -- mainframe.LocalScript 
+	local script = Instance.new('LocalScript', mainframe)
+
+	local frame = script.Parent
+	
+	local player = game.Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumType = Enum.ThumbnailType.AvatarBust
+	local thumSize = Enum.ThumbnailSize.Size420x420
+	local content = game.Players:GetUserThumbnailAsync(userId, thumType,thumSize)
+	
+	frame.PlayerImage.Image = content
+	frame.PlayerName.Text = player.Name
+end
+coroutine.wrap(GKKA_fake_script)()
+local function KBSCY_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+wait(3)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "DA HOOD GUI LOADED";
+		Text = "TIP FOR SILENT AIM: E IS TO LOCK";
+		Duration = "20";
+		Button1 = "OK";
+	})
+coroutine.wrap(KBSCY_fake_script)()
